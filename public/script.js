@@ -126,7 +126,7 @@
 	//	Our fetch function to grab information about a specific movie from the OMDB API.
 
 	const getInfo = (item) => {
-		fetch(`http://omdbapi.com/?apikey=251ae3b0&i=${item.dataset.id}`)
+		fetch(`https://omdbapi.com/?apikey=251ae3b0&i=${item.dataset.id}`)
 		.then(response => response.json())
 		.then((json) => {
 			displayModal(json);
