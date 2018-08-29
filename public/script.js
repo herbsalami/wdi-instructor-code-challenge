@@ -17,7 +17,7 @@
 	const search = (terms) => {
 		page = 1;
 		searchTerms = terms;
-		fetch(`http://omdbapi.com/?apikey=251ae3b0&s=${searchTerms}&page=${page}`)
+		fetch(`https://omdbapi.com/?apikey=251ae3b0&s=${searchTerms}&page=${page}`)
 		.then(response => response.json())
 		.then((json) => {
 			totalResults = parseInt(json.totalResults);
@@ -197,7 +197,7 @@
 
 	const fetchMore = (target) => {
 		page = target.id === 'next-page' ? page + 1 : page - 1;
-		fetch(`http://omdbapi.com/?apikey=251ae3b0&s=${searchTerms}&page=${page}`)
+		fetch(`https://omdbapi.com/?apikey=251ae3b0&s=${searchTerms}&page=${page}`)
 		.then(response => response.json())
 		.then((json) => {
 			movies = json.Search;
